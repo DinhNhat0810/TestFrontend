@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    height: 93.5rem;
+
+}
+
+.sidebar {
+    width: 15rem;
+    background-color: #191718;
+
+}
+
+.sidebar__list {
+
+
+}
+
+.sidebar__item {
+    padding: 1.4rem 0 0.9rem 1.6rem;
+    border: 0.1rem solid #5C5C5C;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.9rem;
+    color: #fff;
+}
+
+.sidebar__item:hover {
+    background-color: #5C5C5C;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width:176.8rem;
+    position: relative;
+}
+
+.logo {
+    width: 31rem;
+    height: 12.2rem;
+    margin: 2rem auto 0;
+
+}
+
+.logo__img {
+    width: 100%;
+    height: 100%;
+}
+
+.about {
+    width: 151rem;
+    text-align: center;
+    margin: 5rem auto 0 auto;
+    background-color: #EFEFEF;
+}
+
+.about__heading {
+    margin-top: 3.8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 2.1rem;
+}
+
+.about__desc {
+    margin-top: 1.8rem;
+    margin-bottom: 3.8rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.9rem;
+
+}
+
+.cards {
+    display: flex;
+    width: 151rem;
+    margin: 4rem auto 0 auto;
+    justify-content: space-between;
+}
+
+
+.cards__item {
+    width: 47rem;
+}
+
+.cards__item-heading {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+}
+
+.cards__item-infor {
+    display: flex;
+    
+}
+
+.cards__item-infor-img {
+    width: 12.8rem;
+    height: 12.8rem;
+    margin-right: 1.6rem;
+}
+
+.cards__item-infor-desc {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: 400;
+}
+
+.cards__item-subdesc {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: 400;
+}
+
+.footer {
+    position: absolute;
+    height: 7.9rem;
+    bottom: 0;
+    left: 12.9rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.9rem;
+    color: #3E3E3E;  
+}
+
+
+
