@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>sliderShow</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="slide">
+            <span class="right">
+                <i class='bx bxs-right-arrow'></i>
+            </span>
+            <span class="left">
+                <i class='bx bxs-left-arrow'></i>
+            </span>
+            <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img9.jpeg" alt="">
+        </div>
+        <div class="list-img">
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img1.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img2.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img3.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img4.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img5.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img6.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img7.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img8.jpeg" alt="">
+            </div>
+            <div>
+                <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img9.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const right = document.querySelector('.right')
+        const left = document.querySelector('.left')
+        const slide = document.querySelector('.slide img')
+        const listImg = document.querySelectorAll('.list-img div')
+
+        let currentIndex = 0
+
+        setCurrent(currentIndex)
+        
+        function setCurrent(index){
+            currentIndex = index
+            slide.src = listImg[currentIndex].querySelector('img').src
+        
+            listImg.forEach(item =>{
+                item.classList.remove('active')
+            })
+
+            listImg[currentIndex].classList.add('active')
+
+        }
+
+        listImg.forEach((element,index) => {
+            element.addEventListener('click', function(){
+                setCurrent(index)
+            })            
+        });
+
+
+
+
+        right.addEventListener('click', function(){
+            if(currentIndex == listImg.length -1){
+                currentIndex = 0
+            }else{
+                currentIndex++
+            }
+
+            setCurrent(currentIndex)
+        })
+
+
+        left.addEventListener('click', function(){
+            if(currentIndex == 0){
+                currentIndex = listImg.length - 1
+            }else{
+                currentIndex--
+            }
+
+            setCurrent(currentIndex)
+        })
+
+    </script>
+</body>
+</html>

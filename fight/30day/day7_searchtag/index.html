@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Search Tag</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="title">Search Tags</h2>
+        <ul class="content">
+            <input type="text" class="search-input" placeholder="Type and enter">
+        </ul>
+        <div class="detail">
+            <p><span>10</span> tags are remaining</p>
+            <button class="remove-btn">Remove All</button>
+        </div>
+    </div>
+
+    <script>
+        const closeTags = document.querySelectorAll('.close-icon')
+        const removeAll = document.querySelector('.remove-btn')
+        const content = document.querySelector('.content')
+        const searchInput = document.querySelector('.search-input')
+        const tagNumber = document.querySelector('.detail span')
+        
+
+        let tags = ['nodejs', 'reactjs']
+        let maxTags = 10
+
+        function countTags() {
+            const tagItems = document.querySelectorAll('.content li')
+            let currentTags = maxTags - tagItems.length
+            tagNumber.innerText = currentTags
+        }
+
+        function createTags() {
+            var tagItem = tags.map((tag)=>{
+                return `
+                    <li>${tag}
+                        <i class='bx bx-x close-icon' onclick="removeTag(this, '${tag}')"></i> 
+                    </li>
+                `
+                
+            })
+            content.innerHTML = tagItem.join('')
+            content.appendChild(searchInput)
+            countTags()
+            searchInput.focus()
+        }
+
+        createTags()
+
+        function removeTag(element,tag){
+            let index  = tags.indexOf(tag);
+            tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
+            console.log(tags)
+            element.parentElement.remove();
+            countTags()
+            searchInput.focus()
+
+        }
+
+        function addTag(e){
+            if(e.key == 'Enter'){
+                let tag = e.target.value.trim()
+                if(tag != '' && !tags.includes(tag)){
+                    tags.push(tag)
+                    createTags()
+                }
+                e.target.value = ''
+                console.log(tags)
+            }
+        }
+
+        searchInput.addEventListener('keyup', addTag)
+
+        removeAll.addEventListener('click', ()=>{
+            tags.length = 0
+            createTags()
+        })
+
+
+
+
+   
+        
+        
+    </script>
+</body>
+</html>

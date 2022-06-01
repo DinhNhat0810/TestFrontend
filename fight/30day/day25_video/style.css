@@ -1,0 +1,81 @@
+/* Import Google Font - Poppins */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5372F0;
+}
+
+.container{
+  width: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.player__video{
+  width: 100%;
+}
+
+.container:hover .player__controls{
+  transform: translateY(0%);
+  
+}
+
+
+.player__controls{
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.9));
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: 0.25s;
+  
+}
+
+.player__controls > * {
+  margin: 5px;
+}
+
+.toggle{
+  font-size: 30px;
+}
+
+.player__button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.player__time{
+    
+}
+
+
+
+.player__progress{
+  flex: 1;
+  background-color: #fff;
+  height: 10px;
+  position: relative;
+}
+
+.player__progress-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: blue;
+}

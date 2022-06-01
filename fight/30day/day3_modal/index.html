@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Open Modal</title>
+</head>
+<body>
+    <button class="open-modal-btn">Open Modal</button>
+    <div class="modal hide">
+        <div class="modal-inner">
+            <div class="modal-header">
+                <p>Welcome to my project!</p>
+                <a href="">
+                    <i class='close-icon bx bx-x'></i>
+                </a>
+            </div>
+    
+            <div class="modal-body">
+                <div class="title">Modal</div>
+                <div class="des">Đây là phần body của modal</div>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    const openModal = document.querySelector('.open-modal-btn')
+    const modal = document.querySelector('.modal')
+    const innerModal = document.querySelector('.modal-inner')
+    const closeModalBtn = document.querySelector('.close-modal')
+    const closeModal = document.querySelector('.modal-header a')
+
+
+    function toggleModal() {
+        modal.classList.toggle('hide')
+    }
+
+
+    openModal.addEventListener('click', toggleModal)
+    closeModalBtn.addEventListener('click', toggleModal)
+    closeModal.addEventListener('click', e=>{
+        e.preventDefault()
+        toggleModal()
+    })
+    modal.addEventListener('click', e=>{
+        if(e.target == e.currentTarget){
+            toggleModal()
+        }
+    })
+</script>
+
+</html>

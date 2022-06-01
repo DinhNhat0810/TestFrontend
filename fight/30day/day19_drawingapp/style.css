@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: steelblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+span{
+    display: inline-block;
+}
+
+.toolbar,.end{
+    display: flex;
+    align-items: center;
+}
+
+.toolbar > *,.end > *{
+    background-color: #fff;
+    border: none;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+canvas{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #333;
+}

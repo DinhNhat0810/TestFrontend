@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>List product</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-5 logo">
+                    <p class="logo__name">DN Shop</p>
+                </div>
+        
+                <div class="col l-7 header__right">
+                    <div class="search-box">
+                        <input type="text" class="search" placeholder="Search....">
+                    </div>
+                    <div class="user">
+                        <a href="" class="user-register">Register</a>
+                        <a href="" class="user-login">Login</a>
+                        <p class="logged">Admin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-2 m-3 c-12 category">
+                    <ul class="list-category">
+                        <li class="item-category active">
+                            <p>All</p>
+                        </li>
+                        <li class="item-category" data-filter="men's clothing">
+                            <p>Men's clothing</p>
+                        </li>
+                        <li class="item-category" data-filter="jewelery">
+                            <p>Jewelery</p>
+                        </li>
+                        <li class="item-category" data-filter="electronics">
+                            <p>Electronics</p>
+                        </li>
+                        <li class="item-category" data-filter="women's clothing">
+                            <p>Women's clothing</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l-10 m-9 product">
+                    <div class="row list-product"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <p class="logout">Đăng xuất</p>
+    </div>
+
+    <div class="modal">
+        <div class="register-modal">
+            <form action="" class="form-register">
+                <div class="form-name">
+                    <h2 class="active">Dang Ky</h2> 
+                    <h2 class="swap-login">Dang Nhap</h2> 
+                </div>
+                <input type="text" placeholder="Ten dang nhap..." class="form-control">
+                <input type="password" placeholder="Mat khau..."  class="form-control">
+                <span>Không được phép đăng ký</span>
+                <input type="submit" value="Dang ky" class="sub-btn">
+            </form>
+        </div>
+        <div class="login-modal">
+            <form action="" class="form-login">
+                <div class="form-name">
+                    <h2 class="active">Dang nhap</h2> 
+                    <h2 class="swap-register">Dang ky</h2> 
+                </div>
+                <input type="text" placeholder="Ten dang nhap..."  id="user-name" class="form-control">
+                <input type="password" placeholder="Mat khau..." id="user-pass" class="form-control">
+                <span>Sai thông tin đang nhập!</span>
+                <input type="submit" value="Dang nhap" class="sub-btn">
+            </form>
+        </div>
+
+        <div class="handles-modal">
+            
+        </div>
+    </div>
+    
+    <script src="./assets/js/js.js"></script>
+</body>
+</html>

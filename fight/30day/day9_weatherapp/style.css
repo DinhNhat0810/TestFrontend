@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?landscape') top center / cover no-repeat;
+}
+
+.card{
+    background-color: #000000d0;
+    margin: 1em;
+    border-radius: 30px;
+    padding: 2em;
+    width: 480px;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input{
+    padding: 0.4em 1em;
+    border-radius:24px;
+    color: white;
+    background-color:#7c7c7c2b;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    width: calc(100% - 50px);
+
+}
+
+.search-input:focus{
+    background-color:#ffffff61;
+
+}
+
+.search-btn{
+    background-color:#7c7c7c2b;
+    padding: 0.08em;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.search-btn:hover{
+    background-color:#ffffff61;
+    
+}
+
+.search-btn i{
+    font-size: 20px;
+    line-height: 44px;
+    color: white;
+
+}
+
+.weather{
+    color: #fff;
+}
+
+.heading{
+    margin: 24px 0;
+    font-size: 28px;
+}
+
+.temp{
+    margin: 20px 0;
+    font-size: 34px;
+}
+
+.status{
+    display: flex;
+    align-items: center;
+}
+
+
+.status-img{
+
+}
+
+.status-text{
+    font-size: 19px;
+    margin-left: 8px;
+    text-transform: uppercase;
+}   
+
+.humidity{
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.wind{
+    font-size: 19px;
+
+}

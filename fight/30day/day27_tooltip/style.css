@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+	--facebook-color: #3b5999;
+	--instagram-color: #e1306c;
+	--youtube-color: #de463b;
+	--twitter-color: #46c1f6;
+	--github-color: #333;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	height: 100vh;
+	background-color: #dadada;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.wrapper {
+    display: flex;
+}
+
+.icon{
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.icon i{
+    height: 60px;
+    width: 60px; 
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip,
+.icon i {
+	transition: 0.3s;
+}
+
+.facebook:hover i{
+    background-color: var(--facebook-color);
+}
+
+.github:hover i{
+    background-color: var(--github-color);
+}
+
+.twitter:hover i{
+    background-color: var(--twitter-color);
+}
+
+.instagram:hover i{
+    background-color: var(--instagram-color);
+}
+
+.youtube:hover i{
+    background-color: var(--youtube-color);
+}
+
+.icon:hover i{
+    color: #fff;
+}
+
+.icon:hover .tooltip{
+    opacity: 1;
+	pointer-events: auto;
+	top: -70px;
+
+}
+
+.tooltip {
+    position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	padding: 10px 18px;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 25px;
+	opacity: 0;
+	pointer-events: none;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip::after{
+    position: absolute;
+	content: '';
+	height: 15px;
+	width: 15px;
+	left: 50%;
+	bottom: -6px;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.facebook:hover .tooltip::after,
+.facebook .tooltip{
+    background-color: var(--facebook-color);
+}
+
+.github:hover .tooltip::after,
+.github .tooltip{
+    background-color: var(--github-color);
+}
+
+.twitter:hover .tooltip::after,
+.twitter .tooltip{
+    background-color: var(--twitter-color);
+}
+
+.instagram:hover .tooltip::after,
+.instagram .tooltip{
+    background-color: var(--instagram-color);
+}
+
+.youtube:hover .tooltip::after,
+.youtube .tooltip{
+    background-color: var(--youtube-color);
+}
+
